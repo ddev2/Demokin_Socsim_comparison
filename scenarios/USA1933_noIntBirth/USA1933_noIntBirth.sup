@@ -1,0 +1,34 @@
+* >>> copy of USA1933.sup with bint 0 and hetfert 0 (missing combination
+* of the design of Table 1); rates and initial population copied unchanged from USA1933, start
+* <<< end
+*************************************************************************
+* Supervisory file for USA stable population based on rates for year 1933
+* Created on 22.08.2025
+* Based on code by Liliana Calderon
+************************************************************************
+** NB: 
+* Probabilities of death come from HMD
+* Fertility rates come from HFD
+************************************************************************
+segments  2
+input_file presim
+
+marriage_after_childbirth 1 
+marriage_eval distribution
+marriage_queues 1
+hetfert 0
+bint 0
+
+************************************************************************
+* Pre-simulation (100 years) to get stable population
+* Using HMD rates for 1933 and HFC rates for 1933
+duration 1200
+include rates/USAfert1933
+include rates/USAmort1933
+run
+
+* Now run for 200 years in order to have full kinship networks
+duration 2400
+include rates/USAfert1933
+include rates/USAmort1933
+run

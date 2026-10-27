@@ -1,0 +1,28 @@
+*************************************************************************
+* Supervisory file for TFR=1, one child at age 26 for all women
+* Created on 25.08.2025
+* Based on code by Liliana Calderon
+************************************************************************
+** NB: 
+* Probabilities of death come from KINFERT
+* Fertility rates come from Daniel Devolder
+************************************************************************
+segments  1
+input_file presim
+
+random_father 1
+marriage_after_childbirth 0 
+marriage_eval distribution
+marriage_queues 1
+* no heterogeneity
+hetfert 1
+* no birth interval
+bint 12
+
+************************************************************************
+* Run for 250 years in order to have full kinship networks
+duration 3000
+include rates/fert
+include rates/marriage
+include rates/mort
+run

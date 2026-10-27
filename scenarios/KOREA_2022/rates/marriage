@@ -1,0 +1,12 @@
+** Period (Monthly) Age-Specific Marriage Rates for SPAIN 1688
+* No marriage! All probabilities equal 0
+
+marriage 1 F single
+0 1 0
+12 1 0
+100 12 0
+
+marriage 1 M single
+0 1 0
+12 1 0
+100 1 0

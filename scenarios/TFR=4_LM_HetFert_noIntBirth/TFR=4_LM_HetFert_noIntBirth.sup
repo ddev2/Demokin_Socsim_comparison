@@ -1,0 +1,25 @@
+* >>> new file, start
+*************************************************************************
+* Supervisory file for TFR=4_LM_HetFert_noIntBirth
+* Missing combination of bint and hetfert in the design of Table 1.
+* Rates, marriage file and initial population copied unchanged from TFR=4_LM,
+* so that the run differs from TFR=4_LM only by bint and hetfert.
+*************************************************************************
+segments  1
+input_file presim
+
+random_father 1
+marriage_after_childbirth 0 
+marriage_eval distribution
+marriage_queues 1
+hetfert 1
+bint 0
+
+*************************************************************************
+* Run for 200 years, as TFR=4_LM, in order to have full kinship networks
+duration 2400
+include rates/fert
+include rates/marriage
+include rates/mort
+run
+* <<< end

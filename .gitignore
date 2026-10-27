@@ -1,0 +1,16 @@
+# >>> new file, start
+# results of the scripts
+results/
+# Socsim outputs and working copies of the initial populations
+scenarios/*/sim_results_*/
+scenarios/*/presim.opop
+scenarios/*/presim.omar
+# R and system files
+.Rhistory
+.RData
+.Rproj.user/
+.DS_Store
+# <<< end
+# >>> paper withdrawn until acceptance, start
+/*.pdf
+# <<< end

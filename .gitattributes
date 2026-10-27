@@ -1,0 +1,5 @@
+# >>> new file, start
+# the paper and the compressed initial populations are binary files
+*.pdf binary
+*.gz  binary
+# <<< end
